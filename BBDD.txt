@@ -1,0 +1,9 @@
+-- Crear el usuario con una contraseña válida y segura
+CREATE USER microserviciossem6 IDENTIFIED BY "MicroServ123!";
+
+-- Otorgar permisos básicos
+GRANT CONNECT, RESOURCE TO microserviciossem6;
+
+-- Configurar tablespace (opcional pero útil)
+ALTER USER microserviciossem6 DEFAULT TABLESPACE USERS;
+ALTER USER microserviciossem6 QUOTA UNLIMITED ON USERS;
